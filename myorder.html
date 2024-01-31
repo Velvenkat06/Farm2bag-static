@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+<style>
+    body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            -ms-overflow-style: none;
+        }
+
+        .navbar {
+            background-color: #629d08;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .navbar img.logo {
+            display: block;
+            border-radius: 40px;
+            margin-right: 10px;
+        }
+
+        .brand {
+            color: white;
+        }
+
+        .brand a {
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .search-container {
+            flex-grow: 1;
+        }
+
+        .search-container form {
+            display: flex;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 20px;
+            margin-left: 150px;
+            margin-bottom: 8px;
+            border: none;
+            width: 50%;
+        }
+
+        .search-container button {
+            padding: 10px;
+            height: 35px;
+            margin-top: 8.5px;
+            background: #ddd;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            margin-right: 15px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        #header {
+            float: left;
+            font-size: 2pc;
+            font-weight: 900;
+        }
+
+        #head {
+            margin-left: 400px;
+        }
+
+        #op {
+            text-align: center;
+            margin-top: 300px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #header {
+                float: left;
+                margin-left: 150px;
+                font-size: 2pc;
+                font-weight: 900;
+            }
+
+            .search-container {
+                margin-left: -150px;
+                margin-top: 10px;
+            }
+
+            .nav-links {
+                margin-left: 110px;
+                margin-top: 10px;
+            }
+
+            .search-container input[type=text] {
+                width: 60vw;
+                margin-left: 230px;
+                border-radius: 20px;
+            }
+
+            .navbar img.logo {
+                display: block;
+                border-radius: 40px;
+                margin-left: 215px;
+            }
+
+            #head {
+                font-size: 1pc;
+                margin-top: 70px;
+                margin-left: 150px;
+            }
+
+            #head span {
+                margin-left: 20px;
+                font-size: 2pc;
+            }
+
+            #img1 {
+                width: 100%;
+                height: 70%;
+                margin-top: -110px;
+                z-index: -1;
+                position: absolute;
+            }
+
+            #op {
+                text-align: center;
+                margin-top: 300px;
+            }
+            #middle img {
+            display: none;
+        }
+        }
+</style>
+<link rel="stylesheet" href="css/two.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="images/fflogo.jpg" alt="" height="60px" width="60px" class="logo">
+        <div class="brand">
+            <a href="" id="header" style="color: white;">FarmFresh</a>
+        </div>
+        <div class="search-container">
+            <form id="search-form">
+                <input type="text" placeholder="Search" name="search" id="search-input">
+            </form>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="./myorders.html">My Orders</a>
+            <a href="./four.html"><img src="images/grocery-cart.png" alt="" height="25px" width="25px"></a>
+        </div>
+    </div>
+    <h1 style="text-align: center;margin-top: 140px;font-family: cursive;">Your Order Details</h1>
+    <table style="margin-top: 70px;">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="orderDetails"></tbody>
+    </table>
+
+    <script>
+        // Retrieve the order data from the URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderDataParam = urlParams.get('orderData');
+
+        if (orderDataParam) {
+            const myOrderData = JSON.parse(decodeURIComponent(orderDataParam));
+            console.log('My Order Data:', myOrderData);
+
+            // You can use myOrderData to display or process the order on the order page
+
+            // Example: Displaying order details in a table
+            const orderDetailsElement = document.getElementById('orderDetails');
+            myOrderData.forEach(item => {
+                const row = document.createElement('tr');
+
+                const productNameCell = document.createElement('td');
+                productNameCell.textContent = item.productName;
+                row.appendChild(productNameCell);
+
+                const quantityCell = document.createElement('td');
+                quantityCell.textContent = item.quantity;
+                row.appendChild(quantityCell);
+
+                const priceCell = document.createElement('td');
+                priceCell.textContent = `₹${item.price.toFixed(2)}`;
+                row.appendChild(priceCell);
+
+                const totalCell = document.createElement('td');
+                totalCell.textContent = `₹${item.total.toFixed(2)}`;
+                row.appendChild(totalCell);
+
+                orderDetailsElement.appendChild(row);
+            });
+
+        } else {
+            console.log('No order data found.');
+        }
+    </script>
+</body>
+</html>

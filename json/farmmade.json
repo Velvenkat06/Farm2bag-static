@@ -1,0 +1,67 @@
+{
+    "products": [
+        {
+            "id": "Add to Cart",
+            "name": "Honey",
+            "price": 1200,
+            "quantity": "1L",
+            "image": "images/honey.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Achu Vellam",
+            "price": 200,
+            "quantity": "1KG",
+            "image": "images/Jaggery.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Karupatti Vellam",
+            "price": 190,
+            "quantity": "1KG",
+            "image": "images/karupatti vellam.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Kombu Honey",
+            "price": 1350,
+            "quantity": "1L",
+            "image": "images/kombu honey.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Malai Honey",
+            "price": 1250,
+            "quantity": "1L",
+            "image": "images/malai honey.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Naatu Sakkarai",
+            "price": 70,
+            "quantity": "1KG",
+            "image": "images/Naatu sakkarai.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Panang Karkandu",
+            "price": 550,
+            "quantity": "1KG",
+            "image": "images/panang karkandu.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Thennang Karupatti",
+            "price": 350,
+            "quantity": "1KG",
+            "image": "images/thennang karupatti.webp"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Urundai Vellam",
+            "price": 150,
+            "quantity": "1KG",
+            "image": "images/urundai vellam.jpg"
+        }
+    ]
+}

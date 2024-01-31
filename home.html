@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmFresh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/fflogo.jpg">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            -ms-overflow-style: none;
+        }
+
+        .navbar {
+            background-color: #629d08;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .navbar img.logo {
+            display: block;
+            border-radius: 40px;
+            margin-right: 10px;
+        }
+
+        .brand {
+            color: white;
+        }
+
+        .brand a {
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .search-container {
+            flex-grow: 1;
+        }
+
+        .search-container form {
+            display: flex;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 20px;
+            margin-left: 150px;
+            margin-bottom: 8px;
+            border: none;
+            width: 50%;
+        }
+
+        .search-container button {
+            padding: 10px;
+            height: 35px;
+            margin-top: 8.5px;
+            background: #ddd;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            margin-right: 15px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        #header {
+            float: left;
+            font-size: 2pc;
+            font-weight: 900;
+        }
+
+        #head {
+            margin-left: 400px;
+        }
+
+        #op {
+            text-align: center;
+            margin-top: 300px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #header {
+                float: left;
+                margin-left: 150px;
+                font-size: 2pc;
+                font-weight: 900;
+            }
+
+            .search-container {
+                margin-left: -150px;
+                margin-top: 10px;
+            }
+
+            .nav-links {
+                margin-left: 110px;
+                margin-top: 10px;
+            }
+
+            .search-container input[type=text] {
+                width: 60vw;
+                margin-left: 230px;
+                border-radius: 20px;
+            }
+
+            .navbar img.logo {
+                display: block;
+                border-radius: 40px;
+                margin-left: 215px;
+            }
+
+            #head {
+                font-size: 1pc;
+                margin-top: 70px;
+                margin-left: 150px;
+            }
+
+            #head span {
+                margin-left: 20px;
+                font-size: 2pc;
+            }
+
+            #img1 {
+                width: 100%;
+                height: 70%;
+                margin-top: -110px;
+                z-index: -1;
+                position: absolute;
+            }
+
+            #op {
+                text-align: center;
+                margin-top: 300px;
+            }
+            #middle img {
+            display: none;
+        }
+        }
+
+        #header1 {
+            float: left;
+            font-size: 3pc;
+            margin-top: -6px;
+            margin-left: -440px;
+        }
+
+        #img1 {
+            margin-top: -110px;
+            z-index: -1;
+            position: absolute;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 185px;
+            color: rgb(255, 255, 255);
+            font-size: 60px;
+            font-weight: bolder;
+            font-family: Baskerville, serif;
+        }
+
+        p span {
+            text-align: center;
+            margin-top: 145px;
+            color: rgb(255, 255, 255);
+            font-size: 70px;
+            font-family: Baskerville, serif;
+        }
+
+        #middle {
+            background-color: #e2fd83;
+            padding: 50px;
+            margin-top: 50px;
+        }
+
+        #middle img {
+            margin-left: 700px;
+            margin-top: -230px;
+        }
+
+        #middle p {
+            font-size: 4pc;
+            text-align: left;
+            font-weight: 900;
+            color: black;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            font-family: cursive;
+        }
+
+        #middle p span {
+            font-size: 2pc;
+            color: darkred;
+        }
+
+        @media screen and (max-width: 1000px) {
+            #middle {
+                width: 100;
+                background-color: #e2fd83;
+                padding: 50px;
+                margin-top: 50px;
+            }
+
+            #middle img {
+                margin-left: 700px;
+                margin-top: -230px;
+            }
+
+            #middle p {
+                font-size: 2pc;
+                text-align: left;
+                font-weight: 900;
+                color: black;
+                margin-top: -10px;
+                margin-bottom: 10px;
+                font-family: cursive;
+            }
+
+            #middle p span {
+                font-size: 1pc;
+                color: darkred;
+            }
+
+            #middle1 {
+                font-size: 1pc;
+            }
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        .grid-item {
+            padding: 10px;
+            border: 1px solid f5f3f3;
+            border-radius: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        .grid-item:hover {
+            zoom: 102%;
+            margin-bottom: -2%;
+            background-color: #efeded;
+        }
+
+        .grid-item img {
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            margin-bottom: -20px;
+        }
+
+        .grid-item p {
+            font-size: 25px;
+            margin-top: 100px;
+            color: black;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 40px;
+                margin-top: 60px;
+            }
+
+            .grid-item {
+                padding: 10px;
+                border: 1px solid f5f3f3;
+                border-radius: 20px;
+                background-color: #f5f5f5;
+                text-align: center;
+            }
+
+            .grid-item:hover {
+                zoom: 102%;
+                margin-bottom: -2%;
+                background-color: #efeded;
+            }
+
+            .grid-item img {
+                width: 100px;
+                height: 100px;
+                margin-top: 20px;
+                margin-bottom: -20px;
+            }
+
+            .grid-item p {
+                font-size: 25px;
+                margin-top: 100px;
+                color: black;
+            }
+        }
+
+        .grid-container1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            padding: 40px;
+            margin-top: 70px;
+        }
+
+        .grid-item1 {
+            padding: 60px;
+            margin: auto;
+            border-radius: 20px;
+            background-color: #f8a201;
+            text-align: center;
+        }
+
+        .grid-item1 img {
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            margin-top: -15px;
+            margin-bottom: -50px;
+        }
+
+        .grid-item1 p {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 60px;
+            color: black;
+        }
+
+        .grid-item1:hover {
+            zoom: 102%;
+            background-color: #e2fd83;
+            margin-bottom: -2%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .grid-container1 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 35px;
+                padding: 40px;
+                margin-top: 70px;
+            }
+
+            .grid-item1 {
+                padding: 60px;
+                margin: auto;
+                border-radius: 20px;
+                background-color: #f8a201;
+                text-align: center;
+            }
+
+            .grid-item1 img {
+                width: 140px;
+                height: 140px;
+                border-radius: 20px;
+                margin-top: -15px;
+                margin-bottom: -50px;
+            }
+
+            .grid-item1 p {
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: 60px;
+                color: black;
+            }
+
+            .grid-item1:hover {
+                zoom: 102%;
+                background-color: #e2fd83;
+                margin-bottom: -2%;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            .grid-container1 {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 35px;
+                padding: 40px;
+                margin-top: 70px;
+            }
+
+            .grid-item1 {
+                padding: 60px;
+                margin: auto;
+                border-radius: 20px;
+                background-color: #f8a201;
+                text-align: center;
+            }
+
+            .grid-item1 img {
+                width: 140px;
+                height: 140px;
+                border-radius: 20px;
+                margin-top: -15px;
+                margin-bottom: -50px;
+            }
+
+            .grid-item1 p {
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: 60px;
+                color: black;
+            }
+
+            .grid-item1:hover {
+                zoom: 102%;
+                background-color: #e2fd83;
+                margin-bottom: -2%;
+            }
+        }
+
+        p.content {
+            font-size: 15px;
+            margin-top: -10px;
+            font-weight: normal;
+        }
+
+        .foot {
+            margin-top: 100px;
+            width: 98vw;
+            height: 78vh;
+            margin-left: 4px;
+            background-color: rgb(31, 86, 5);
+            color: white;
+            margin-bottom: -1000px;
+        }
+
+        .grid-container4 {
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 19px;
+            background-color: rgb(31, 86, 5);
+            height: 50vh;
+            margin-bottom: -100px;
+        }
+
+        .grid-item4 {
+            background-color: rgb(31, 86, 5);
+            padding: 8px;
+            height: 30vh;
+        }
+
+        #adressclass {
+            padding-left: 0px;
+        }
+
+        #fo {
+            color: white;
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 17px;
+            margin-top: -3px;
+            margin-left: -220px;
+        }
+
+        .grid-item4 h2 {
+            color: white;
+        }
+
+        #weblink,
+        i {
+            color: white;
+            margin-left: 10px;
+            display: block;
+        }
+
+        #weblink i:hover {
+            zoom: 105%;
+            margin-bottom: -5%;
+        }
+
+        #ad {
+            text-decoration: none;
+            line-height: 2;
+            color: white;
+        }
+
+        .grid-item4 i {
+            margin-right: 7%;
+            padding: 6px;
+        }
+
+        #orgimgs {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        #companyname {
+            margin-right: -1px;
+            float: right;
+        }
+
+        #input-label {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            margin-top: -7px;
+        }
+
+        #user-input {
+            height: 35px;
+            width: 250px;
+            border: 2px solid #0e0f0e;
+            border-radius: 16px;
+        }
+
+        #signup-button {
+            text-wrap: nowrap;
+            padding: 12px 30px;
+            background-color: #fbfcfb;
+            color: #0e0e0e;
+            text-align: center;
+            text-decoration: none;
+            font-size: 13px;
+            cursor: pointer;
+            border: none;
+            border-radius: 16px;
+        }
+
+        #signup-button:hover {
+            background-color: #e2fd83;
+        }
+
+        @media screen and (max-width: 580px) {
+    .foot {
+        /* Adjust styles for smaller screens */
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 0; /* Adjust as needed */
+    }
+
+    .grid-container4 {
+        /* Adjust styles for smaller screens */
+        grid-template-columns: repeat(1, 1fr); /* Adjust as needed */
+        height: auto;
+        margin-bottom: 0; /* Adjust as needed */
+    }
+
+    .grid-item4 {
+        /* Adjust styles for smaller screens */
+        height: auto;
+    }
+    #companyname {
+            margin-right: 180px;
+            float: right;
+        }
+
+    /* Add any other styles adjustments for smaller screens as needed */
+}
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="images/fflogo.jpg" alt="" height="60px" width="60px" class="logo">
+        <div class="brand">
+            <a href="" id="header" style="color: white;">FarmFresh</a>
+        </div>
+        <div class="search-container">
+            <form action="/search">
+                <input type="text" placeholder="Search" name="search">
+            </form>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="./myorder.html">My Orders</a>
+            <a href="./four.html"><img src="images/grocery-cart.png" alt="" height="25px" width="25px"></a>
+        </div>
+    </div>
+    <img src="images/healthy-organic-tea-with-dry-herb-fern-leaves-black-surface.jpg" alt="" height="700px" width="100%"
+        id="img1">
+    <p id="head"> Welcome to <br><span>Our Farm Fresh</span></p>
+    <h1 id="op">Our Products</h1>
+    <div class="grid-container1">
+
+        <div class="grid-item1">
+            <a href="./homemade.html"><img src="images/plate-with-bowls-with-seasoning.jpg" alt=""></a>
+            <p>Home made Products</p>
+            <p class="content">"Home made with love is always better have it."</p>
+        </div>
+
+        <div class="grid-item1">
+            <a href="./farmmade.html"><img src="images/glass-jar-full-honey-wooden-tray.jpg" alt=""></a>
+            <p>Farm made Products</p>
+            <p class="content">"If we grow more food, there will be enough food to feed everyone."</p>
+        </div>
+        <div class="grid-item1">
+            <a href="./health.html"><img src="images/health.jpg" alt=""></a>
+            <p>Health and Essentials</p>
+            <p class="content">"Invest in your skin.It is going to represent you for a very long time."</p>
+        </div>
+    </div>
+    <div id="middle">
+        <p>Fresh And Exotic <br>Sweets <br><span>In Our Store</span></p>
+        <img src="images/homesweets.jpg" alt="" height="40%" width="40%">
+        <p id="middle1"
+            style="font-weight:200; font-size:2pc; font-weight: bold; color: chocolate; font-family: cursive;">Bring
+            home festive vibes with variety of sweets</p>
+    </div>
+    <h1 style="text-align: center; margin-top: 50px;">Services</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="images/delivery.png" alt="">
+            <p>Free Shipping</p>
+            <p style="font-size: 20px; margin-top: -20px; color: lightslategray;">Free on order above ₹ 300</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="images/cash-flow.png" alt="">
+            <p>30 Day Return</p>
+            <p style="font-size: 20px; margin-top: -20px; color: lightslategray;">30 day money guarantee</p>
+        </div>
+        <div class="grid-item">
+            <img src="images/information.png" alt="">
+            <p>24/7 Support</p>
+            <p style="font-size: 20px; margin-top: -20px; color: lightslategray;">Support every time fast</p>
+        </div>
+        <div class="grid-item">
+            <img src="images/secure-payment.png" alt="">
+            <p>Security Payment</p>
+            <p style="font-size: 20px; margin-top: -20px; color: lightslategray;">100% security payment</p>
+        </div>
+    </div>
+    <footer class="foot">
+        <div class="grid-container4">
+            <div class="grid-item4" id="adressclass">
+                <h2>Address</h2>
+                <a href="" id="ad"><i class="fa fa-globe" aria-hidden="true"></i>5/23,Thalaivasal,Salem</a><br>
+                <a href="" id="ad"><i class="fa fa-phone" aria-hidden="true"></i>+91 8778112430</a><br>
+                <a href="" id="ad"><i class="fa fa-envelope" aria-hidden="true"></i>farmfresh@gmail.com</a>
+            </div>
+            <div class="grid-item4" id="adressclass">
+                <h2>Quick Links</h2>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>About Us</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Contact Us</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Our Services</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Terms & Condition</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Support</a>
+            </div>
+            <div class="grid-item4">
+                <h2>News Letter</h2>
+                <p id="fo">Enter your Email to sign up</p>
+                <form id="signup-form">
+                    <label id="input-label">
+                        <input type="email" id="user-input" placeholder="Enter your email">
+                        <button type="submit" id="signup-button">Sign Up</button>
+                    </label>
+                </form>
+            </div>
+            <div class="grid-item4">
+                <img src="images/fflogo.jpg" alt="Your Logo" id="orgimgs">
+                <h1 id="companyname">Farm Fresh</h1>
+                <a href="https://www.facebook.com/" id="weblink" style="margin-left: 50px;"><i
+                        class="fa fa-facebook-official" aria-hidden="true" title="Facebook"></i>Facebook</a>
+                <a href="https://www.instagram.com/" id="weblink" style="margin-left: 50px;"><i class="fa fa-instagram"
+                        aria-hidden="true" title="Instagram"></i>Instagram</a>
+                <a href="https://www.threads.net/login" id="weblink" style="margin-left: 50px;"><i
+                        class="fa fa-twitter-square" aria-hidden="true" title="Twitter"></i>Twitter</a>
+                <a href="https://in.linkedin.com/" id="weblink" style="margin-left: 50px;"><i
+                        class="fa fa-linkedin-square" aria-hidden="true" title="Linkedin"></i>Linkedin</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

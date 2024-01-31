@@ -1,0 +1,81 @@
+{
+    "products": [
+        {
+            "id": "Add to Cart",
+            "name": "Chocolate Burfi",
+            "price": 120,
+            "quantity": "1KG",
+            "image": "images/chocolate burfi.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Gulab Jamun",
+            "price": 170,
+            "quantity": "1KG",
+            "image": "images/gulab jamun.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Halwa",
+            "price": 90,
+            "quantity": "1KG",
+            "image": "images/halwa.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Mysore Pak",
+            "price": 108,
+            "quantity": "1KG",
+            "image": "images/mysoor pak.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Kaju Katli",
+            "price": 200,
+            "quantity": "1KG",
+            "image": "images/kaju katli.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Laddo",
+            "price": 250,
+            "quantity": "1KG",
+            "image": "images/laddo.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Rasagulla",
+            "price": 320,
+            "quantity": "1KG",
+            "image": "images/rasagulla.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Pepper Powder",
+            "price": 50,
+            "quantity": "100gm",
+            "image": "images/pepper powder.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Coriander Powder",
+            "price": 30,
+            "quantity": "100gm",
+            "image": "images/coriander-powder.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Red Chilli Powder",
+            "price": 45,
+            "quantity": "100gm",
+            "image": "images/red chilli powder.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Turmeric Powder",
+            "price": 50,
+            "quantity": "100gm",
+            "image": "images/tameric powder.jpg"
+        }
+    ]
+}

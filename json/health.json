@@ -1,0 +1,81 @@
+{
+    "products": [
+        {
+            "id": "Add to Cart",
+            "name": "Aloe Vera Gel",
+            "price": 315,
+            "quantity": "500g",
+            "image": "images/aloe vera gel.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Aloe Vera Soap",
+            "price": 144,
+            "quantity": "1Pc",
+            "image": "images/aloe-vera-soap.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Amla Hair Oil",
+            "price": 142,
+            "quantity": "500ml",
+            "image": "images/amla hair oil.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Avacado Hair Oil",
+            "price": 170,
+            "quantity": "200ml",
+            "image": "images/avacado hair oil.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Kuppaimeni Soap",
+            "price": 99,
+            "quantity": "1Pc",
+            "image": "images/kuppaimeni soap.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Maruthani dye",
+            "price": 60,
+            "quantity": "100g",
+            "image": "images/maruthani dye.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Neem Soap",
+            "price": 80,
+            "quantity": "1Pc",
+            "image": "images/Neem Soap.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Rose Water",
+            "price": 45,
+            "quantity": "100ml",
+            "image": "images/rose water.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Sandalwood Soap",
+            "price": 54,
+            "quantity": "1Pc",
+            "image": "images/sandalwood soap.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Turmeric Face Mask",
+            "price": 65,
+            "quantity": "10g",
+            "image": "images/Turmeric Face Mask.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Turmeric Soap",
+            "price": 57,
+            "quantity": "1Pc",
+            "image": "images/turmeric soap.jpg"
+        }
+    ]
+}

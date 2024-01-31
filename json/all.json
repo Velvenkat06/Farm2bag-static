@@ -1,0 +1,221 @@
+{
+    "products": [
+        {
+            "id": "Add to Cart",
+            "name": "Honey",
+            "price": 1200,
+            "quantity": "1L",
+            "image": "images/honey.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Achu Vellam",
+            "price": 200,
+            "quantity": "1KG",
+            "image": "images/Jaggery.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Karupatti Vellam",
+            "price": 190,
+            "quantity": "1KG",
+            "image": "images/karupatti vellam.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Kombu Honey",
+            "price": 1350,
+            "quantity": "1L",
+            "image": "images/kombu honey.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Malai Honey",
+            "price": 1250,
+            "quantity": "1L",
+            "image": "images/malai honey.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Naatu Sakkarai",
+            "price": 70,
+            "quantity": "1KG",
+            "image": "images/Naatu sakkarai.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Panang Karkandu",
+            "price": 550,
+            "quantity": "1KG",
+            "image": "images/panang karkandu.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Thennang Karupatti",
+            "price": 350,
+            "quantity": "1KG",
+            "image": "images/thennang karupatti.webp"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Urundai Vellam",
+            "price": 150,
+            "quantity": "1KG",
+            "image": "images/urundai vellam.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Aloe Vera Gel",
+            "price": 315,
+            "quantity": "500g",
+            "image": "images/aloe vera gel.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Aloe Vera Soap",
+            "price": 144,
+            "quantity": "1Pc",
+            "image": "images/aloe-vera-soap.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Amla Hair Oil",
+            "price": 142,
+            "quantity": "500ml",
+            "image": "images/amla hair oil.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Avacado Hair Oil",
+            "price": 170,
+            "quantity": "200ml",
+            "image": "images/avacado hair oil.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Kuppaimeni Soap",
+            "price": 99,
+            "quantity": "1Pc",
+            "image": "images/kuppaimeni soap.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Maruthani dye",
+            "price": 60,
+            "quantity": "100g",
+            "image": "images/maruthani dye.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Neem Soap",
+            "price": 80,
+            "quantity": "1Pc",
+            "image": "images/Neem Soap.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Rose Water",
+            "price": 45,
+            "quantity": "100ml",
+            "image": "images/rose water.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Sandalwood Soap",
+            "price": 54,
+            "quantity": "1Pc",
+            "image": "images/sandalwood soap.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Turmeric Face Mask",
+            "price": 65,
+            "quantity": "10g",
+            "image": "images/Turmeric Face Mask.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Turmeric Soap",
+            "price": 57,
+            "quantity": "1Pc",
+            "image": "images/turmeric soap.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Chocolate Burfi",
+            "price": 120,
+            "quantity": "1KG",
+            "image": "images/chocolate burfi.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Gulab Jamun",
+            "price": 170,
+            "quantity": "1KG",
+            "image": "images/gulab jamun.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Halwa",
+            "price": 90,
+            "quantity": "1KG",
+            "image": "images/halwa.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Mysore Pak",
+            "price": 108,
+            "quantity": "1KG",
+            "image": "images/mysoor pak.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Kaju Katli",
+            "price": 200,
+            "quantity": "1KG",
+            "image": "images/kaju katli.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Laddo",
+            "price": 250,
+            "quantity": "1KG",
+            "image": "images/laddo.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Rasagulla",
+            "price": 320,
+            "quantity": "1KG",
+            "image": "images/rasagulla.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Pepper Powder",
+            "price": 50,
+            "quantity": "100gm",
+            "image": "images/pepper powder.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Coriander Powder",
+            "price": 30,
+            "quantity": "100gm",
+            "image": "images/coriander-powder.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Red Chilli Powder",
+            "price": 45,
+            "quantity": "100gm",
+            "image": "images/red chilli powder.jpg"
+        },
+        {
+            "id": "Add to Cart",
+            "name": "Turmeric Powder",
+            "price": 50,
+            "quantity": "100gm",
+            "image": "images/tameric powder.jpg"
+        }
+    ]
+}

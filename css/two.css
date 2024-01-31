@@ -1,0 +1,104 @@
+
+#header1 {
+    float: left;
+    font-size: 3pc;
+    margin-top: -6px;
+    margin-left: -440px;
+}
+
+table {
+    margin-top: 150px;
+    margin-left: 180px;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+td{
+    font-weight: 600;
+}
+
+th {
+    font-weight: bolder;
+    
+    background-color:white;
+    color: rgb(65, 201, 3);
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color:white;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+}
+#delete{
+    font-weight: 100;
+}
+#placeOrderBtn{
+    margin-top: 50px;
+    padding: 12px;
+    margin-bottom: 130px;
+    background-color: chartreuse;
+    margin-left: 570px;
+}
+#placeOrderBtn:hover{
+    color: white;
+}
+@media only screen and (max-width:720px){
+    
+    table {
+        margin-top: 150px;
+        margin-left: 30px;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        padding: 10px;
+        text-align: center;
+    }
+    td{
+        font-weight: 600;
+    }
+    
+    th {
+        font-weight: bolder;
+        background-color:white;
+        color: rgb(65, 201, 3);
+    }
+    
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+    
+    button {
+        padding:2px;
+        cursor: pointer;
+        background-color:white;
+        border: none;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+    #delete{
+        font-weight: 100;
+    }
+    #placeOrderBtn{
+        margin-top: 50px;
+        padding: 12px;
+        margin-bottom: 130px;
+        background-color: chartreuse;
+        margin-left: 200px;
+    }
+    #placeOrderBtn:hover{
+        color: white;
+    }
+}
+
